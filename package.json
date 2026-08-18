@@ -1,0 +1,23 @@
+{
+  "name": "codeeasekit",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript utility toolkit for developers",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/test.js"
+  },
+  "keywords": [
+    "javascript",
+    "utilities",
+    "validators",
+    "formatters",
+    "generators",
+    "developer-tools"
+  ],
+  "author": "Dharmesh Shukla",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
