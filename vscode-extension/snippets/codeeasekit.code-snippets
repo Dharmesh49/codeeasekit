@@ -1,0 +1,45 @@
+{
+  "CodeEaseKit Import": {
+    "prefix": "cek-import",
+    "body": [
+      "const { ${1:validateEmail} } = require('codeeasekit');"
+    ],
+    "description": "Import a CodeEaseKit utility"
+  },
+  "CodeEaseKit Validate Email": {
+    "prefix": "cek-email",
+    "body": [
+      "const isValid = validateEmail(${1:email});",
+      "console.log(isValid);"
+    ],
+    "description": "Validate an email using CodeEaseKit"
+  },
+  "CodeEaseKit Generate OTP": {
+    "prefix": "cek-otp",
+    "body": [
+      "const otp = generateOTP(${1:6});"
+    ],
+    "description": "Generate an OTP using CodeEaseKit"
+  },
+  "CodeEaseKit Generate Password": {
+    "prefix": "cek-password",
+    "body": [
+      "const password = generatePassword(${1:16});"
+    ],
+    "description": "Generate a secure password using CodeEaseKit"
+  },
+  "CodeEaseKit Safe JSON Parse": {
+    "prefix": "cek-json",
+    "body": [
+      "const data = safeJSONParse(${1:json}, ${2:null});"
+    ],
+    "description": "Safely parse JSON using CodeEaseKit"
+  },
+  "CodeEaseKit Clamp": {
+    "prefix": "cek-clamp",
+    "body": [
+      "const value = clamp(${1:number}, ${2:min}, ${3:max});"
+    ],
+    "description": "Clamp a number using CodeEaseKit"
+  }
+}
