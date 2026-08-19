@@ -5,6 +5,15 @@
   "version": "1.0.0",
   "publisher": "dharmesh49",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dharmesh49/codeeasekit.git",
+    "directory": "vscode-extension"
+  },
+  "homepage": "https://github.com/Dharmesh49/codeeasekit/tree/main/vscode-extension",
+  "bugs": {
+    "url": "https://github.com/Dharmesh49/codeeasekit/issues"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
