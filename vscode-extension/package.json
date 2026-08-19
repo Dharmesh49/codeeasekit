@@ -1,0 +1,124 @@
+{
+  "name": "codeeasekit-vscode",
+  "displayName": "CodeEaseKit",
+  "description": "Developer utilities powered by CodeEaseKit: validators, generators, formatting, snippets and editor tools.",
+  "version": "1.0.0",
+  "publisher": "dharmesh49",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "codeeasekit",
+    "developer tools",
+    "validation",
+    "otp",
+    "password generator",
+    "snippets",
+    "javascript",
+    "typescript"
+  ],
+  "activationEvents": [
+    "onCommand:codeeasekit.validateEmail",
+    "onCommand:codeeasekit.validateURL",
+    "onCommand:codeeasekit.generateOTP",
+    "onCommand:codeeasekit.generatePassword",
+    "onCommand:codeeasekit.generateRandomId",
+    "onCommand:codeeasekit.capitalizeSelection",
+    "onCommand:codeeasekit.removeDuplicateLines",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeeasekit.validateEmail",
+        "title": "CodeEaseKit: Validate Email"
+      },
+      {
+        "command": "codeeasekit.validateURL",
+        "title": "CodeEaseKit: Validate URL"
+      },
+      {
+        "command": "codeeasekit.generateOTP",
+        "title": "CodeEaseKit: Generate OTP"
+      },
+      {
+        "command": "codeeasekit.generatePassword",
+        "title": "CodeEaseKit: Generate Password"
+      },
+      {
+        "command": "codeeasekit.generateRandomId",
+        "title": "CodeEaseKit: Generate Random ID"
+      },
+      {
+        "command": "codeeasekit.capitalizeSelection",
+        "title": "CodeEaseKit: Capitalize Selected Text"
+      },
+      {
+        "command": "codeeasekit.removeDuplicateLines",
+        "title": "CodeEaseKit: Remove Duplicate Lines"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeeasekit.validateEmail",
+          "when": "editorHasSelection",
+          "group": "codeeasekit@1"
+        },
+        {
+          "command": "codeeasekit.validateURL",
+          "when": "editorHasSelection",
+          "group": "codeeasekit@2"
+        },
+        {
+          "command": "codeeasekit.capitalizeSelection",
+          "when": "editorHasSelection",
+          "group": "codeeasekit@3"
+        },
+        {
+          "command": "codeeasekit.removeDuplicateLines",
+          "when": "editorHasSelection",
+          "group": "codeeasekit@4"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/codeeasekit.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/codeeasekit.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/codeeasekit.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/codeeasekit.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node ./test/smoke.test.js",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "codeeasekit": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
+  }
+}
